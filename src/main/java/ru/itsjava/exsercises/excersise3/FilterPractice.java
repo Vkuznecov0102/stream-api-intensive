@@ -13,11 +13,29 @@ public class FilterPractice {
 
 
 //  Найти количество всех студентов, которые учатся на гуманитарном факультете
+        int countHumanitarianStudents = 0;
+        for (Student student : students) {
+            if (student.getFaculty().isHumanitarian()) {
+                countHumanitarianStudents++;
+            }
+        }
+        System.out.println(countHumanitarianStudents);
 
+
+        long countStudents = students.stream()
+                .filter(student -> student.getFaculty().isHumanitarian())
+                .count();
+
+        System.out.println(countStudents);
 
 //  Найти количество всех студентов,
 //  которые учатся на факультете старше 1969 года
 
+        long countStudentsWithFacultyMoreThan1969 = students.stream()
+                .filter(student -> student.getFaculty().getBirthYear() > 1969)
+                .count();
+
+        System.out.println(countStudentsWithFacultyMoreThan1969);
     }
 }
 

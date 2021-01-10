@@ -11,7 +11,6 @@ public class ToCollectionPractice {
         TreeSet<Integer> treeSet = numbers.stream()
                 .collect(Collectors.toCollection(TreeSet::new));
 
-
         System.out.println(treeSet);
 
     }

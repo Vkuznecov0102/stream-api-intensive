@@ -13,5 +13,18 @@ public class StringPractice {
         System.out.println(students);
         //Собрать имена всех студентов в одну строку
 
+        StringBuilder stringBuilder = new StringBuilder("{");
+        for (Student student : students) {
+            stringBuilder.append(student.getName()).append(",");
+        }
+        stringBuilder.deleteCharAt(stringBuilder.length() - 1);
+        stringBuilder.append('}');
+        String names = stringBuilder.toString();
+        System.out.println(names);
+
+        String names2 = students.stream()
+                .map(Student::getName)
+                .collect(Collectors.joining(",", "{", "}"));
+        System.out.println(names2);
     }
 }

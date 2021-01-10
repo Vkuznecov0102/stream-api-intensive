@@ -14,7 +14,11 @@ public class MinMaxPractice {
 
 //        Найти студента с наименьшим возрастом
 
+        Student student1 = students.stream()
+                .min(Comparator.comparing(student -> student.getAge()))
+                .get();
 
+        System.out.println(student1);
 
     }
 }

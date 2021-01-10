@@ -11,8 +11,11 @@ public class FlatMapPractice {
 
     public static void main(String[] args) {
         //объединить 2 списка целых чисел
-        List<Student> students = UniversityInitializer.initStudents();
-        System.out.println(students);
+        Stream<Integer> integerStream1 = Stream.of(1, 2);
+        Stream<Integer> integerStream2 = Stream.of(3, 4);
+
+//        Stream.of(integerStream1, integerStream2)
+//                .flatMap()
 
 
     }

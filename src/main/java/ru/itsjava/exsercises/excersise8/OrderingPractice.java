@@ -15,6 +15,11 @@ public class OrderingPractice {
 
         //превратить множество чисел в список с числами в обратном порядке
 
+        List<Integer> integerList = numbers.stream()
+                .sorted(Comparator.comparing(Integer::intValue).reversed())
+                .collect(Collectors.toList());
+
+        System.out.println(integerList);
 
     }
 }

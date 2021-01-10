@@ -11,7 +11,8 @@ public class MapPractice {
     public static void main(String[] args) {
         List<Student> students = UniversityInitializer.initStudents();
 
-        List<String> names = students.stream().map(student -> student.getName())
+        List<String> names = students.stream()
+                .map(Student::getName)
                 .collect(Collectors.toList());
 
         System.out.println(names);

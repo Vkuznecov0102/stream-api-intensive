@@ -13,6 +13,12 @@ public class MapPractice2 {
         System.out.println(students);
         //из списка студентов вернуть список имен большими буквами
 
+        List<String> names = students.stream()
+                .filter(student -> !student.getFaculty().isHumanitarian())
+                .map(student -> student.getName().toUpperCase())
+                .collect(Collectors.toList());
+
+        System.out.println(names);
 
     }
 }
