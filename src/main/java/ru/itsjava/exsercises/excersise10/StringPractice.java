@@ -22,9 +22,5 @@ public class StringPractice {
         String names = stringBuilder.toString();
         System.out.println(names);
 
-        String names2 = students.stream()
-                .map(Student::getName)
-                .collect(Collectors.joining(",", "{", "}"));
-        System.out.println(names2);
     }
 }

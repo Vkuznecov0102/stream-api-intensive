@@ -7,15 +7,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class FlatMapPractice {
+public class StreamOfPractice {
 
     public static void main(String[] args) {
         //объединить 2 списка целых чисел
         Stream<Integer> integerStream1 = Stream.of(1, 2);
         Stream<Integer> integerStream2 = Stream.of(3, 4);
 
-//        Stream.of(integerStream1, integerStream2)
-//                .flatMap()
+
 
 
     }

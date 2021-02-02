@@ -1,6 +1,7 @@
 package ru.itsjava.exsercises.excersise1;
 
 
+import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -10,9 +11,9 @@ public class FunctionalInterfacesPractice {
 
 
     public static void main(String[] args) {
-        Runnable runnable = () -> {
-            System.out.println("Привет я лямбда");
-        };
+        Runnable runnable = () ->
+                System.out.println("Привет я лямбда");
+
         runnable.run();
         runnable.run();
 
@@ -28,7 +29,14 @@ public class FunctionalInterfacesPractice {
         //который проверяет является ли первый символ у строки числом
         //Воспользоваться Character.isDigit()
 
+        BiFunction<Integer, Integer, Integer> sum = (num1, num2) -> num1 + num2;
+        BinaryOperator<Integer> sumBinaryOperator = (num1, num2) -> num1 + num2;
+        System.out.println("sum.apply(5,4) = " + sum.apply(5, 4));
+        System.out.println("sum.apply(5,4) = " + sumBinaryOperator.apply(5, 4));
+
 
         //Написать свой оператор разности для типа int
+
+        //home
     }
 }

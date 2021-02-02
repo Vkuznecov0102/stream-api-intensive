@@ -18,22 +18,12 @@ public class WithOptionalPractice {
         System.out.println(anyStudent);
 
         //Найти первого студента
-        Student firstStudent = students.stream()
-                .findFirst()
-                .get();
 
-        System.out.println(firstStudent);
 
 //        Найти имя любого студента,который учится на факультете programming
 //        и возраст которого больше 18
 
-        Optional<String> optionalStudent = students.stream()
-                .filter(student -> student.getFaculty()
-                        .getName().equals("Programming"))
-                .filter(student -> student.getAge() > 18)
-                .map(Student::getName)
-                .findAny();
-        System.out.println(optionalStudent.get());
+
 
     }
 }

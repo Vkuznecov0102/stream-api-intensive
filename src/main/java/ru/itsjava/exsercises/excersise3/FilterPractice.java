@@ -31,11 +31,7 @@ public class FilterPractice {
 //  Найти количество всех студентов,
 //  которые учатся на факультете старше 1969 года
 
-        long countStudentsWithFacultyMoreThan1969 = students.stream()
-                .filter(student -> student.getFaculty().getBirthYear() > 1969)
-                .count();
-
-        System.out.println(countStudentsWithFacultyMoreThan1969);
+       //home
     }
 }
 

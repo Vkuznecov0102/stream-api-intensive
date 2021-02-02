@@ -12,13 +12,8 @@ public class MapPractice2 {
         List<Student> students = UniversityInitializer.initStudents();
         System.out.println(students);
         //из списка студентов вернуть список имен большими буквами
+        // не гуммантирных факутльтетов
 
-        List<String> names = students.stream()
-                .filter(student -> !student.getFaculty().isHumanitarian())
-                .map(student -> student.getName().toUpperCase())
-                .collect(Collectors.toList());
-
-        System.out.println(names);
 
     }
 }

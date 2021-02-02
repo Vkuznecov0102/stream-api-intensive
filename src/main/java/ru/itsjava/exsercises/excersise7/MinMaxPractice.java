@@ -20,5 +20,8 @@ public class MinMaxPractice {
 
         System.out.println(student1);
 
+
+        //Найти студента с наибольшим возрастом
+
     }
 }
