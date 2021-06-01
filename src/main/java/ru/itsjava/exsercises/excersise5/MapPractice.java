@@ -5,6 +5,7 @@ import ru.itsjava.model.Student;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class MapPractice {
@@ -19,6 +20,11 @@ public class MapPractice {
                 .collect(Collectors.toList());
 
         System.out.println(names);
+
+        Set<String> uniqueNames = students.stream().
+                map(student -> student.getName()).
+                collect(Collectors.toSet());
+        System.out.println(uniqueNames);
 
     }
 }

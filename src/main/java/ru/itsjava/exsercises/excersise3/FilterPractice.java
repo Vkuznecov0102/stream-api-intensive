@@ -30,8 +30,18 @@ public class FilterPractice {
 
 //  Найти количество всех студентов,
 //  которые учатся на факультете старше 1969 года
+        int countElderStudents = 0;
+        for (Student student : students) {
+            if (student.getFaculty().getBirthYear() > 1969) {
+                countElderStudents++;
+            }
+        }
+        System.out.println("Это не стрим " + countElderStudents);
 
-       //home
+        long count = students.stream().filter(student -> student.getFaculty().getBirthYear() > 1969).count();
+        System.out.println("Это стрим " + count);
+
+        //home
     }
 }
 

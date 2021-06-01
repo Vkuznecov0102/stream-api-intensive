@@ -14,9 +14,10 @@ public class OrderingPractice {
         Set<Integer> numbers = new HashSet<>(asList(6, 1, 4, 5, 3));
 
         //превратить множество чисел в список с числами в обычном порядке
+        numbers.stream().sorted().forEach(n -> System.out.print(n));
 
         //превратить множество чисел в список с числами в обратном порядке
-
+        numbers.stream().sorted(Comparator.reverseOrder()).forEach(n -> System.out.print(n));
 
     }
 }

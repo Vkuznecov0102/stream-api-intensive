@@ -22,6 +22,10 @@ public class MinMaxPractice {
 
 
         //Найти студента с наибольшим возрастом
+        Student maxStudent = students.stream()
+                .max(Comparator.comparing(student -> student.getAge()))
+                .get();
+        System.out.println(maxStudent);
 
     }
 }

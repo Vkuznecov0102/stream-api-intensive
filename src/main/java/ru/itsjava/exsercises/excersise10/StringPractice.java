@@ -22,5 +22,10 @@ public class StringPractice {
         String names = stringBuilder.toString();
         System.out.println(names);
 
+        //стрим
+        var studentsStream = students.stream().map(student -> student.getName())
+                .collect(Collectors.joining(",", "{", "}"));
+        System.out.println(studentsStream);
+
     }
 }

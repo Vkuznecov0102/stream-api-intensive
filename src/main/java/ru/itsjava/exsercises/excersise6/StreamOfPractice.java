@@ -14,7 +14,8 @@ public class StreamOfPractice {
         Stream<Integer> integerStream1 = Stream.of(1, 2);
         Stream<Integer> integerStream2 = Stream.of(3, 4);
 
-
+        var united = Stream.concat(integerStream1, integerStream2).collect(Collectors.toSet());
+        System.out.println(united);
 
 
     }

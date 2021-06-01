@@ -20,5 +20,7 @@ public class FilterPractice2 {
 
         System.out.println(countStudents);
 
+        //filter-конвейерный, count-терминальный.
+
     }
 }

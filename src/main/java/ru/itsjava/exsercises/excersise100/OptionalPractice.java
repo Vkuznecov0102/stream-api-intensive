@@ -13,7 +13,7 @@ public class OptionalPractice {
         Optional<Student> optionalStudent = Optional.ofNullable(student);
 
         optionalStudent.ifPresent(student1 -> System.out.println(student.getName()));
-//        System.out.println(optionalStudent.get());
+        System.out.println(optionalStudent.get());
 
 
     }
